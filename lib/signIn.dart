@@ -1,3 +1,5 @@
+import 'package:scale_city/mapPage.dart';
+
 import 'main.dart';
 import 'package:flutter/material.dart';
 
@@ -10,10 +12,42 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
 
-  bool seePass = false;
+  bool seePass = true;
+  TextEditingController usernameController = new TextEditingController();
+  TextEditingController passwordController = new TextEditingController();
+
+  Widget _SignInErrorPopup(BuildContext context) {
+    return new AlertDialog(
+      title: const Text('Sign In Error'),
+      content: new Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text("Incorrect username and/or password."),
+        ],
+      ),
+      actions: <Widget>[
+        new TextButton(
+          style: TextButton.styleFrom(
+            primary: Colors.white,
+            backgroundColor: Colors.red,
+            padding: const EdgeInsets.all(10.0),
+            textStyle: const TextStyle(fontSize: 15),
+          ),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Text('Close'),
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
+    String username = '';
+    String password = '';
+
     return MaterialApp(
       title: 'SignIn',
       home: Scaffold(
@@ -38,6 +72,7 @@ class _SignInState extends State<SignIn> {
             children: [
               new Container(
                 child: TextField(
+                  controller: usernameController,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Username',
@@ -46,6 +81,7 @@ class _SignInState extends State<SignIn> {
               ),
               new Container(
                 child: TextField(
+                  controller: passwordController,
                   obscureText: seePass,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -70,7 +106,22 @@ class _SignInState extends State<SignIn> {
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
                     ),
                     onPressed: () {
-
+                      if (usernameController.text == "admin" && passwordController.text == "admin") {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MapPage(
+                              title: 'Map Page',
+                            ),
+                          ),
+                        );
+                      }
+                      else {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) => _SignInErrorPopup(context),
+                        );
+                      }
                     },
                     child: Text('Sign In'),
                   )
