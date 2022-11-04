@@ -141,8 +141,8 @@ class LoginWidget extends StatelessWidget {
             children: <Widget>[
               ButtonTheme(
                 minWidth: 300.0,
-                child: RaisedButton(
-                  color: Color(0xff00539f),
+                child: ElevatedButton(
+                  //color: Color(0xff00539f),
                   child: Text(
                     'Login as Guest',
                     style: TextStyle(color: Color(0xffffd544), fontSize: 20),
@@ -161,8 +161,7 @@ class LoginWidget extends StatelessWidget {
               ),
               ButtonTheme(
                 minWidth: 300.0,
-                child: RaisedButton(
-                  color: Color(0xff00539f),
+                child: ElevatedButton(
                   child: Text(
                     'Login as User',
                     style: TextStyle(color: Color(0xffffd544), fontSize: 20),
@@ -267,3 +266,5 @@ class _AboutUs extends State {
         );
   }
 }
+
+class carListBuilder {}

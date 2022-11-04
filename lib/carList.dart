@@ -1,6 +1,7 @@
 import 'main.dart';
 import 'mapPage.dart';
 import 'package:flutter/material.dart';
+import 'car.dart';
 
 //**********CAR-List PAGE***********
 class MyHome extends StatelessWidget {
@@ -86,11 +87,11 @@ class _CarList extends State<MyHomePage1> {
       ])),
       body: activeScreen.contentBuilder(context),
 
-      // ListView.builder(
-      //     itemCount: litems.length,
-      //     itemBuilder: (BuildContext ctxt, int index) {
-      //       return Text(litems[index]);
-      //     })
+      /*ListView.builder(
+         itemCount: litems.length,
+          itemBuilder: (BuildContext ctxt, int index) {
+            return Text(litems[index]);
+          })*/
     );
   }
 }
@@ -105,6 +106,7 @@ class Screen {
 
   Screen({this.title, this.contentBuilder});
 }
+
 //IDS Car List
 final Screen carListScreen = Screen(
     title: 'IDS Car List',
@@ -114,6 +116,15 @@ final Screen carListScreen = Screen(
           _Car(),
           _Car2(),
           _Car3(),
+          _Car4(),
+          _Car5(),
+          _Car6(),
+          _Car7(),
+          _Car8(),
+          _Car9(),
+          _Car10(),
+          _Car11(),
+          _Car12(),
         ],
       );
     });
@@ -189,6 +200,318 @@ class _Car2 extends StatelessWidget {
 
 class _Car3 extends StatelessWidget {
   const _Car3({Key key}) : super(key: key);
+
+  // final String headImageAssetPath;
+  // final String title;
+
+  // _Car({
+  //   this.headImageAssetPath, this.title;
+  // });
+
+//get car3 image
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10.0,
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/images/car3.1.png',
+            width: double.infinity,
+            height: 150.0,
+            fit: BoxFit.cover,
+          ),
+          Row(
+            children: [
+              Text('White Jeep'),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class _Car4 extends StatelessWidget {
+  const _Car4({Key key}) : super(key: key);
+
+  // final String headImageAssetPath;
+  // final String title;
+
+  // _Car({
+  //   this.headImageAssetPath, this.title;
+  // });
+
+//get car1 image
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10.0,
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/images/car1.1.png',
+            width: double.infinity,
+            height: 150.0,
+            fit: BoxFit.cover,
+          ),
+          Row(
+            children: [
+              Text("Dark blue Sport"),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class _Car5 extends StatelessWidget {
+  const _Car5({Key key}) : super(key: key);
+
+  // final String headImageAssetPath;
+  // final String title;
+
+  // _Car({
+  //   this.headImageAssetPath, this.title;
+  // });
+
+//get car2 image
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10.0,
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/images/car2.1.png',
+            width: double.infinity,
+            height: 150.0,
+            fit: BoxFit.cover,
+          ),
+          Row(
+            children: [
+              Text('Blue Sedan'),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class _Car6 extends StatelessWidget {
+  const _Car6({Key key}) : super(key: key);
+
+  // final String headImageAssetPath;
+  // final String title;
+
+  // _Car({
+  //   this.headImageAssetPath, this.title;
+  // });
+
+//get car3 image
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10.0,
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/images/car3.1.png',
+            width: double.infinity,
+            height: 150.0,
+            fit: BoxFit.cover,
+          ),
+          Row(
+            children: [
+              Text('White Jeep'),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class _Car7 extends StatelessWidget {
+  const _Car7({Key key}) : super(key: key);
+
+  // final String headImageAssetPath;
+  // final String title;
+
+  // _Car({
+  //   this.headImageAssetPath, this.title;
+  // });
+
+//get car1 image
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10.0,
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/images/car1.1.png',
+            width: double.infinity,
+            height: 150.0,
+            fit: BoxFit.cover,
+          ),
+          Row(
+            children: [
+              Text("Dark blue Sport"),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class _Car8 extends StatelessWidget {
+  const _Car8({Key key}) : super(key: key);
+
+  // final String headImageAssetPath;
+  // final String title;
+
+  // _Car({
+  //   this.headImageAssetPath, this.title;
+  // });
+
+//get car2 image
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10.0,
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/images/car2.1.png',
+            width: double.infinity,
+            height: 150.0,
+            fit: BoxFit.cover,
+          ),
+          Row(
+            children: [
+              Text('Blue Sedan'),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class _Car9 extends StatelessWidget {
+  const _Car9({Key key}) : super(key: key);
+
+  // final String headImageAssetPath;
+  // final String title;
+
+  // _Car({
+  //   this.headImageAssetPath, this.title;
+  // });
+
+//get car3 image
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10.0,
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/images/car3.1.png',
+            width: double.infinity,
+            height: 150.0,
+            fit: BoxFit.cover,
+          ),
+          Row(
+            children: [
+              Text('White Jeep'),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class _Car10 extends StatelessWidget {
+  const _Car10({Key key}) : super(key: key);
+
+  // final String headImageAssetPath;
+  // final String title;
+
+  // _Car({
+  //   this.headImageAssetPath, this.title;
+  // });
+
+//get car1 image
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10.0,
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/images/car1.1.png',
+            width: double.infinity,
+            height: 150.0,
+            fit: BoxFit.cover,
+          ),
+          Row(
+            children: [
+              Text("Dark blue Sport"),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class _Car11 extends StatelessWidget {
+  const _Car11({Key key}) : super(key: key);
+
+  // final String headImageAssetPath;
+  // final String title;
+
+  // _Car({
+  //   this.headImageAssetPath, this.title;
+  // });
+
+//get car2 image
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 10.0,
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/images/car2.1.png',
+            width: double.infinity,
+            height: 150.0,
+            fit: BoxFit.cover,
+          ),
+          Row(
+            children: [
+              Text('Blue Sedan'),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class _Car12 extends StatelessWidget {
+  const _Car12({Key key}) : super(key: key);
 
   // final String headImageAssetPath;
   // final String title;
