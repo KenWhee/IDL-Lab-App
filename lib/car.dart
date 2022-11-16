@@ -1,6 +1,7 @@
 import 'main.dart';
 import 'mapPage.dart';
 import 'package:flutter/material.dart';
+import 'carSocket.dart';
 
 List<String> assetsImages;
 List<String> carID;
@@ -36,4 +37,6 @@ CarCard carPopulate(carCard) {
   return carCard;
 }
 
-void getCarInformation() {}
+void getCarInformation() {
+  //carSocket carInformation;
+}
