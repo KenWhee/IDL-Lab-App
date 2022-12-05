@@ -79,7 +79,7 @@ List<String> parseString(carInfo) {
 
   for (int i = 0; i < parseList.length; i++) {
     // add only the carID's
-    if (i % 11 == 0 || i == 1) {
+    if ((i % 11) - 1 == 0 || i == 1) {
       carInfoCompleted = parseList[i];
     }
     //add only the desired_x_pos
