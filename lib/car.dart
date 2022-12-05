@@ -5,8 +5,12 @@ import 'carSocket.dart';
 
 List<String> assetsImages;
 List<String> carID;
+List<String> desiredXPOS;
+List<String> currentXPOS;
 List<String> carOnlineStatus;
 List<String> carInstructionStatus;
+List<String> carInfoStrings;
+List<bool> isInUseList;
 
 class CarCard {
   Widget build(BuildContext context) {
@@ -38,5 +42,31 @@ CarCard carPopulate(carCard) {
 }
 
 void getCarInformation() {
-  //carSocket carInformation;
+  carInfoStrings = getCarInfoCompleted();
+}
+
+void parseIntoStrings(carInfoStrings) {
+  int count = 0;
+  for (int i = 0; i < carInfoStrings.length; i++) {
+    if (i % 3 == 0 || i == 0) {
+      carID[count] = carInfoStrings[i];
+    }
+    if ((i % 3) - 1 == 0) {
+      desiredXPOS[count] = carInfoStrings[i];
+    }
+    if ((i % 3) - 2 == 0) {
+      currentXPOS[count] = carInfoStrings[i];
+    }
+
+    count++;
+  }
+}
+
+void isInUse() {
+  for (int i = 0; i < carID.length; i++) {
+    if (desiredXPOS[i] == currentXPOS[i])
+      isInUseList[i] = false;
+    else
+      isInUseList[i] = true;
+  }
 }
