@@ -12,14 +12,27 @@ List<String> carInstructionStatus;
 List<String> carInfoStrings;
 List<bool> isInUseList;
 
-class CarCard {
+List<Car> carList;
+
+class Car extends StatelessWidget {
+  const Car({Key key}) : super(key: key);
+
+  // final String headImageAssetPath;
+  // final String title;
+
+  // _Car({
+  //   this.headImageAssetPath, this.title;
+  // });
+
+//get car1 image
+  @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 10.0,
       child: Column(
         children: [
           Image.asset(
-            assetsImages[1],
+            'assets/images/car1.1.png',
             width: double.infinity,
             height: 150.0,
             fit: BoxFit.cover,
@@ -35,10 +48,14 @@ class CarCard {
   }
 }
 
-List<CarCard> carClassList;
+List<Car> carClassList;
 
-CarCard carPopulate(carCard) {
-  return carCard;
+void carPopulate(carCard) {
+  Car car1;
+  carList.add(car1);
+  carList.add(car1);
+  carList.add(car1);
+  carList.add(car1);
 }
 
 void getCarInformation() {

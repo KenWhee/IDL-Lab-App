@@ -8,7 +8,10 @@ import 'carList.dart';
 Online status indicator
 dynamic car card
 car socket testing
+click on car card to bring to instructions page
+send flag to map page
 */
+
 //**********CAR-List PAGE***********
 class MyHome extends StatelessWidget {
   const MyHome({Key key}) : super(key: key);
@@ -119,6 +122,7 @@ final Screen carListScreen = Screen(
     contentBuilder: (BuildContext content) {
       return ListView(
         children: [
+          /*
           _Car(),
           _Car2(),
           _Car3(),
@@ -131,6 +135,8 @@ final Screen carListScreen = Screen(
           _Car10(),
           _Car11(),
           _Car12(),
+          */
+          ...carList
         ],
       );
     });

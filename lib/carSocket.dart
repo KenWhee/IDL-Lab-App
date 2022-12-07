@@ -101,6 +101,8 @@ List<String> getCarInfoCompleted() {
 }
 
 
+
+
 // if we get a hostname we can assume it's online
 // if it desired_pos != pos_X assign instruction status
 //  then lock car card
