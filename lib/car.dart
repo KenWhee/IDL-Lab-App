@@ -87,3 +87,66 @@ void isInUse() {
       isInUseList[i] = true;
   }
 }
+
+/*
+class info {
+  void carPopulate(carCard) {
+    Car car1;
+    carList.add(car1);
+    carList.add(car1);
+    carList.add(car1);
+    carList.add(car1);
+  }
+}
+
+class info1{
+  void getCarInformation() {
+    carInfoStrings = getCarInfoCompleted();
+  }
+}
+
+class info2{
+  void parseIntoStrings(carInfoStrings) {
+    int count = 0;
+    for (int i = 0; i < carInfoStrings.length; i++) {
+      if (i % 3 == 0 || i == 0) {
+        carID[count] = carInfoStrings[i];
+      }
+      if ((i % 3) - 1 == 0) {
+        desiredXPOS[count] = carInfoStrings[i];
+      }
+      if ((i % 3) - 2 == 0) {
+        currentXPOS[count] = carInfoStrings[i];
+      }
+
+      count++;
+    }
+  }
+}
+
+class info3{
+  void isInUse() {
+    for (int i = 0; i < carID.length; i++) {
+      if (desiredXPOS[i] == currentXPOS[i])
+        isInUseList[i] = false;
+      else
+        isInUseList[i] = true;
+    }
+  }
+}
+
+class carss implements info,info1,info2,info3{
+  void isInUse(){
+    print("check_For_isInUse");
+  }
+  void parseIntoStrings(carInfoStrings){
+    print("check_For_parseIntoStrings");
+  }
+  void getCarInfomration(){
+    print("check_for_getcarInformation");
+  }
+  void carPopulation(){
+    print("check_for_carpopulation");
+  }
+}
+ */
