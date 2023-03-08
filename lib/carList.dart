@@ -122,10 +122,11 @@ final Screen carListScreen = Screen(
     contentBuilder: (BuildContext content) {
       return ListView(
         children: [
-          /*
+          carNumDisplay(),
           _Car(),
           _Car2(),
           _Car3(),
+          /*
           _Car4(),
           _Car5(),
           _Car6(),
@@ -136,25 +137,37 @@ final Screen carListScreen = Screen(
           _Car11(),
           _Car12(),
           */
-          ...carList
+          //...carList
         ],
       );
     });
 
+class carNumDisplay extends StatelessWidget {
+  const carNumDisplay({Key key}) : super(key: key);
+  final int totalCars = 3;
+  final int currNumCars = 2;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        title: Text("Total Number of Cars: " + totalCars.toString()),
+        subtitle: Text("Number of Available Cars: " + currNumCars.toString()),
+      ),
+    );
+  }
+}
+
 class _Car extends StatelessWidget {
   const _Car({Key key}) : super(key: key);
-
-  // final String headImageAssetPath;
-  // final String title;
-
-  // _Car({
-  //   this.headImageAssetPath, this.title;
-  // });
+  final String carID = "manta_127";
+  final bool available = true;
 
 //get car1 image
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: available == true ? Colors.green : Colors.white,
       elevation: 10.0,
       child: Column(
         children: [
@@ -166,7 +179,8 @@ class _Car extends StatelessWidget {
           ),
           Row(
             children: [
-              Text("Dark blue Sport"),
+              //Text("Dark blue Sport"),
+              Text("Car ID: " + carID)
             ],
           )
         ],
@@ -177,6 +191,8 @@ class _Car extends StatelessWidget {
 
 class _Car2 extends StatelessWidget {
   const _Car2({Key key}) : super(key: key);
+  final String carID = "manta_104";
+  final bool available = false;
 
   // final String headImageAssetPath;
   // final String title;
@@ -190,6 +206,7 @@ class _Car2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: available == true ? Colors.green : Colors.white,
       elevation: 10.0,
       child: Column(
         children: [
@@ -201,7 +218,8 @@ class _Car2 extends StatelessWidget {
           ),
           Row(
             children: [
-              Text('Blue Sedan'),
+              //Text('Blue Sedan'),
+              Text("Car ID: " + carID)
             ],
           )
         ],
@@ -212,7 +230,8 @@ class _Car2 extends StatelessWidget {
 
 class _Car3 extends StatelessWidget {
   const _Car3({Key key}) : super(key: key);
-
+  final String carID = "manta_122";
+  final bool available = true;
   // final String headImageAssetPath;
   // final String title;
 
@@ -225,6 +244,7 @@ class _Car3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: available == true ? Colors.green : Colors.white,
       elevation: 10.0,
       child: Column(
         children: [
@@ -236,7 +256,8 @@ class _Car3 extends StatelessWidget {
           ),
           Row(
             children: [
-              Text('White Jeep'),
+              //Text('White Jeep'),
+              Text("Car ID: " + carID)
             ],
           )
         ],
